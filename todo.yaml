@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: todo-deploy
+spec:
+  replicas: 3
+  selector:
+    app: todo
+  template:
+    metadata:
+      name: todo
+      labels:
+        app: todo
+    spec:
+      containers:
+      - name: todo-container
+        image: anilbidari/todo:1.0
+        ports:
+        - containerPort: 8080
