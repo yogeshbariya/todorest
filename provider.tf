@@ -1,5 +1,5 @@
-provider "google" { 
-  credentials = file("/var/lib/jenkins/sc.json")
-  project     = "infosys-251803"
+provider "google" {
+  credentials = file("vocal-camera-264620-2257fe68d879.json")
+  project     = "vocal-camera-264620"
   region      = "us-central1"
 }
