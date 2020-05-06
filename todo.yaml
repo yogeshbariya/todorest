@@ -3,7 +3,7 @@ kind: ReplicationController
 metadata:
   name: todo-deploy
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     app: todo
   template:
