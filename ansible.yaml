@@ -1,7 +1,6 @@
 ---
 - hosts: deployment-server
   become_user: ubuntu
-  sudo: yes
   tasks:
 
   - name: Download jar file
