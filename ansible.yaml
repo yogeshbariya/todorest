@@ -1,0 +1,12 @@
+---
+- hosts: deployment-server
+  sudo: yes
+  tasks:
+
+  - name: Download jar file
+    get_url:
+      url: http://172.31.25.217:8081/repository/maven-releases/todorest-0.0.1-SNAPSHOT.jar
+      dest: /home/ubuntu/
+
+  - name: run jar file
+    shell: nohup java -jar todorest-0.0.1-SNAPSHOT.jar /tmp 2>> /dev/null >> /dev/null & 
